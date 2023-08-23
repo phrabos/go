@@ -36,12 +36,10 @@ func binarySearch(s []int, target int) int {
 		mid := (high + low) / 2
 		if s[mid] == target {
 			return i
-		}
-		if s[mid] < target {
-			high = mid
-		}
-		if s[mid] > target {
-			low = mid
+		} else if s[mid] < target {
+			low = mid + 1
+		} else s[mid] > target {
+			high = mid - 1
 		}
 	}
 
