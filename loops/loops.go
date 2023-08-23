@@ -24,4 +24,26 @@ func Loops() {
 	for name, ip := range hosts {
 		fmt.Printf("%v: %v\n", name, ip)
 	}
+
+	
+}
+// []int{2,4,7,9.13}
+func binarySearch(s []int, target int) int {
+	high := len(s) - 1
+	low := 0
+	
+	for low <= high {
+		mid := (high + low) / 2
+		if s[mid] == target {
+			return i
+		}
+		if s[mid] < target {
+			high = mid
+		}
+		if s[mid] > target {
+			low = mid
+		}
+	}
+
+	return -1
 }
